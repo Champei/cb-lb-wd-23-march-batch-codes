@@ -1,0 +1,62 @@
+/* .list-container {
+    li {
+        border: 1px solid green;
+    }
+} */
+
+
+ul:first-child {
+    background-color: blue;
+
+    li:first-child {
+        border: 1px solid green;
+    }
+}
+
+.list-items {
+    /* applying styles on class */
+    color: red;
+}
+
+.list-items.list-ol-item {
+    /* applying styles on multiple classes */
+    color: orange;
+}
+
+li {
+    /* applying styles directly on html tag */
+}
+
+li#mul-sel-line.mul-sel-line {
+    font-size: 36px;
+    font-weight: 700;
+    color: blue !important;
+}
+
+li#mul-sel-line.mul-sel-line {
+    font-size: 36px;
+    font-weight: 700;
+    color: yellow;
+}
+
+
+.section {
+    width: 200px;
+    border: 2px solid red;
+
+    .div1 {
+        /* width: 100%; */
+        border: 1px solid green;
+        margin-top: 2px;
+        margin-left: 2px;
+        margin-right: 2px;
+        margin-bottom: 2px;
+        padding: 5px;
+
+    }
+
+    div {
+        border: 1px solid green;
+    }
+}
+

@@ -1,0 +1,49 @@
+body {
+    border: 2px solid red;
+    /* height: 100vh; */
+}
+
+.section-container {
+    border: 2px solid blue;
+    background-color: rgb(010, 255, 124);
+    /* height: 100vh; */
+
+    /* breakpoint at 900px  */
+    @media (max-width: 900px) {
+        background-color: rgb(255, 0, 255);
+        color: white;
+    }
+
+    /* breakpoint at 700px  */
+    @media (max-width: 700px) {
+        background-color: rgb(0, 125, 255);
+        color: white;
+    }
+
+     /* breakpoint at 500px */
+    @media (max-width: 500px) {
+        background-color: rgb(255, 0, 0);
+        color: white;
+    }
+
+    @media ((min-width: 300px) and (max-width: 700px)) {
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+}
+
+
+.section-container-2 {
+    height: 400px;
+    margin-top: 50px;
+    border: 2px solid green;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    /* flex-wrap: wrap; */
+    
+    div {
+        border: 2px solid blue;
+        height: 50px;
+    }
+}
