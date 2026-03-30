@@ -1,0 +1,79 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+.parent {
+    border: 2px solid black;
+    width: 400px;
+    padding: 8px;
+}
+.span-class {
+    color: blue;
+}
+.child {
+    border: 2px solid red;
+    padding: 8px;
+    color: white;
+    background-color: rgba(255, 0, 0, 1);
+}
+
+.child2 {
+    border: 2px solid blue;
+    background-color: blue;
+    position: relative;
+    top: -200px;
+    left: 50px;
+    color: white;
+}
+.element {
+    border: 2px solid blue;
+    position: fixed;
+    right: 16px;
+    /* top: 200px; */
+    bottom: 16px;
+    padding: 8px;
+    height: 24px;
+    border-radius: 20px;
+    background-color: lightblue;
+    color: black;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-section {
+    border: 2px solid green;
+    background-color: rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin-top: 64px;
+    /* height: 90vh;
+    overflow-y: auto; */
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(38, 0, 255, 1);
+    color: white;;
+    position: sticky;
+    top: 0; /* 0 here means 0 of viewport.*/
+    height: 32px;
+}
+
+.header2 {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(255, 166, 0, 1);
+    color: white;;
+    position: sticky;
+    top: 32px; /* 0 here means 0 of viewport.*/
+    height: 32px;
+}
+
+.content {
+    padding: 8px;
+}
