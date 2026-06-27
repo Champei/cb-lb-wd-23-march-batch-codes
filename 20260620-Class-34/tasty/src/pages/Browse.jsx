@@ -4,7 +4,7 @@ import { searchMeals, getMealsByCategory, getCategories } from '../api/mealApi'
 import RecipeCard from '../components/RecipeCard'
 import Loader from '../components/Loader'
 
-function Browse({ isFavorite, toggleFavorite}) {
+function Browse() {
 
     const [searchParams, setSearchParams] = useSearchParams()
     const query = searchParams.get('q') || ''
@@ -35,7 +35,7 @@ function Browse({ isFavorite, toggleFavorite}) {
             setLoading(false)
         }
         load()
-    }, [query, categories])
+    }, [query, category])
 
     function runSearch() {
         const q = input.trim()
@@ -109,8 +109,6 @@ function Browse({ isFavorite, toggleFavorite}) {
                         <RecipeCard 
                             key={meal.idMeal}
                             meal={meal}
-                            isFavorite={isFavorite}
-                            toggleFavorite={toggleFavorite}
                         />
                     ))}
                 </div>
