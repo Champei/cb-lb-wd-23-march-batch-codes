@@ -1,12 +1,9 @@
+import { useContext } from 'react'
 import { Link } from 'react-router-dom'
+import { useFavorites } from '../context/FavoritesContext'
 
-// Props:
-// ``````
-// meals -> the recipe to show
-// isFavorite -> function(id) => boolean (optional)
-// toggleFavorite -> function(meal) => void (optional)
-
-function RecipeCard({ meal, isFavorite, toggleFavorite }) {
+function RecipeCard({ meal }) {
+    const {isFavorite, toggleFavorite } = useFavorites()
     const canFavorite = typeof toggleFavorite === 'function'
     const favorited = canFavorite && isFavorite(meal.idMeal)
     return (

@@ -4,8 +4,7 @@ import { getMealsByCategory } from '../api/mealApi'
 import RecipeCard from '../components/RecipeCard'
 import Loader from '../components/Loader'
 
-
-function CategoriesMeals({isFavorite, toggleFavorite}) {
+function CategoriesMeals() {
 
     const {categoryName } = useParams()
     const [meals, setMeals] = useState([])
@@ -29,7 +28,7 @@ function CategoriesMeals({isFavorite, toggleFavorite}) {
             `}</style>
             <div className='grid'>
                 {meals.map((meal) => (
-                    <RecipeCard key={meal.idMeal} meal={meal} isFavorite={isFavorite} toggleFavorite={toggleFavorite}/>
+                    <RecipeCard key={meal.idMeal} meal={meal} />
                 ))}
             </div>
         </div>

@@ -1,12 +1,13 @@
 // src/components/Layout.jsx
+import { useContext } from 'react'
 import { Outlet } from 'react-router-dom'
 import Navbar from './Navbar.jsx'
 import Footer from './Footer.jsx'
 import ScrollToTop from './ScrollToTop.jsx'
+import { ThemeContext } from '../context/ThemeContext.jsx'
 
-// 😖 Layout receives favoritesCount/theme/toggleTheme ONLY to hand them to Navbar.
-//    It doesn't use them itself. This "pass-through" is prop drilling.
-function Layout({ favoritesCount, theme, toggleTheme }) {
+function Layout() {
+  const { theme } = useContext(ThemeContext)
   return (
     <div className={theme === 'dark' ? 'app dark' : 'app'}>
       <style>{`
@@ -26,8 +27,7 @@ function Layout({ favoritesCount, theme, toggleTheme }) {
       `}</style>
 
       <ScrollToTop />
-      {/* 😖 forward the props down one more level */}
-      <Navbar favoritesCount={favoritesCount} theme={theme} toggleTheme={toggleTheme} />
+      <Navbar />
       <main className="app-main">
         <Outlet />
       </main>
